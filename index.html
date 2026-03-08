@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Rent Receipt</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css">
+        <!--Google Fonts-->
+        <!--Material Icons-->
+        <!--CSS-->
+    </head>
+    <body>
+        <main class="receipt-box">
+            <header>
+                <h1>Rent Receipt</h1>
+                <p id="currentTime"></p>
+            </header>
+            <section class="form-panel">
+                <h1>Generate Rent Receipt</h1>
+                <form id="receiptform">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+
+                    <label for="gender">Gender</label><br>
+                    <input type="radio" id="male" name="gender" value="Male"> Male
+                    <input type="radio" id="female" name="gender" value="Female"> Female
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for = "phone">Phone Number:</label>
+                    <input type="tel" name="phone" required>
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address">
+
+                    <label for="unit">Unit:</label>
+                    <input type="number" name="unit">
+
+                    <label for="amount">Amount(USD)</label>
+                    <input type="text" id="amount" name="amount" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*">
+
+                    <label for="paymentdate">Payment Date</label>
+                    <input type="date" id="paymentdate" name="paymentdate">
+
+                    <label for="rentperiod">Rent Period</label>
+                    <input type="date" id="rentperiod" name="rentperiod" required>
+
+                    <label for="to">To:</label>
+                    <input type="date" id="to" name="to" required>
+
+                    <label for="paymentmethod">Payment Method</label>
+                    <input type="Text" id="paymentmethod" name="paymentmethod" required>
+
+                    <label type="notes">Notes:</label>
+                    <textarea id="notes" name="notes"></textarea>
+                    
+
+
+                    <!--inputs: tenant, address, unit, amount, date, method, landlord, notes-->
+                    <div class="form-actions">
+                        <button type="button" id="generateBtn">Generate Receipt</button>
+                        <button type="button" id="printBtn">Print</button>
+                        <button type="button" id="saveBtn">Save</button>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="preview-panel" aria-live="polite">
+                <!--generate receipt preview goes here-->
+                <div id="receiptCard" class="receipt-card"></div>
+            </aside>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
